@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport">
     <title>Jogo Mata Mosquito</title>
 
     <!-- Logica do app -->
     <script src="jogo.js"></script>
 
+    <!-- Estilo do app -->
+    <link rel="stylesheet" href="estilo.css" />
+
     <!-- 1coisa - saber ate onde no eixo x e y podemos atuar para nao 
         aparecer barra de rolagem e o mosquito aparecer fora dessa area -->
 </head>
 
-<body>
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <script>
+        posicaoRandomica()
+    </script>
 
 </body>
 
