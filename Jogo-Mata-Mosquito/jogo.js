@@ -28,8 +28,8 @@ function posicaoRandomica() {
     var posicaoX = Math.floor(Math.random() * largura) - 90 //-90px para a mosca não sumir devido termos dado 50px para ela
     var posicaoY = Math.floor(Math.random() * altura) - 90 //-90px para a mosca não sumir devido termos dado 50px para ela
 
-    posicaoX = posicaoX < 0 ? 0 : posicaoX
-    posicaoY = posicaoY < 0 ? 0 : posicaoY
+    posicaoX = posicaoX < 0 ? 0 : posicaoX //Se posicaox for menor que 0, então o valor de posicaox é substituído por 0.
+    posicaoY = posicaoY < 0 ? 0 : posicaoY //Se posicaoY for menor que 0, então o valor de posicaoY é substituído por 0.
 
     console.log(posicaoX, posicaoY)
 
