@@ -1,4 +1,4 @@
-//////////////////TAMANHO DA PAGINA//////////////////////////
+//////////////////////////////TAMANHO DA PAGINA/////////////////////////////
 
 //declarar fora da função e só chamar depois
 var largura = 0
@@ -24,6 +24,11 @@ ajustaTamanhoPalcoJogo()
 //função encapisulada criada para chamar la na pagina html no body, pois o script esta sendo lido no head
 function posicaoRandomica() {
 
+    //remover o mosquito anterior (caso exista)
+    if (document.getElementById('mosquito')) {
+        document.getElementById('mosquito').remove() //chama pelo id e remove
+    }
+
     //valor produzido de força aleatória em dois eixos
     var posicaoX = Math.floor(Math.random() * largura) - 90 //-90px para a mosca não sumir devido termos dado 50px para ela
     var posicaoY = Math.floor(Math.random() * altura) - 90 //-90px para a mosca não sumir devido termos dado 50px para ela
@@ -41,6 +46,7 @@ function posicaoRandomica() {
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
 
     document.body.appendChild(mosquito)
 
