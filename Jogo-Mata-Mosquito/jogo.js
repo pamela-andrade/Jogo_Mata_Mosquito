@@ -4,6 +4,8 @@
 var largura = 0
 var altura = 0
 
+var vidas = 1
+
 //ajustes dinâmicos - função apara obter as dimensões da janela do navegador e, em seguida, 
 //atribui esses valores às variáveis largura e altura, respectivamente.
 function ajustaTamanhoPalcoJogo() {
@@ -24,9 +26,19 @@ ajustaTamanhoPalcoJogo()
 //função encapisulada criada para chamar la na pagina html no body, pois o script esta sendo lido no head
 function posicaoRandomica() {
 
-    //remover o mosquito anterior (caso exista)
+    //remover o mosquito anterior (caso exista) de forma automatica caso não seja clicado entra nessa logica
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove() //chama pelo id e remove
+
+        if (vidas > 3) {
+            window.location.href = 'fim_de_jogo.html'
+        }
+
+        //console.log('v' + vidas)
+        document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+
+
+        vidas++
     }
 
     //valor produzido de força aleatória em dois eixos
@@ -47,6 +59,11 @@ function posicaoRandomica() {
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+
+    //quando clicar, remover
+    mosquito.onclick = function () {
+        this.remove()
+    }
 
     document.body.appendChild(mosquito)
 
