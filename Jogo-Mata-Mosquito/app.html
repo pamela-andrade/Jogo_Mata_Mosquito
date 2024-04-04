@@ -24,10 +24,15 @@
             <img id="v2" src="imagens/coracao_cheio.png" alt="">
             <img id="v3" src="imagens/coracao_cheio.png" alt="">
         </div>
-        <div class="cronometro">Tempo restante: ?</div>
+        <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
     </div>
 
     <script>
+
+        //para aparecer antes se não le só depois
+        document.getElementById('cronometro').innerHTML = tempo
+
+
         //dentro de um ciclo de tempo, ou seja de um intervalo, roda essa função que chama o metodo posicaoRandomica
         setInterval(function () {
             posicaoRandomica()

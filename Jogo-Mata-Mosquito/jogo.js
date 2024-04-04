@@ -6,6 +6,8 @@ var altura = 0
 
 var vidas = 1
 
+var tempo = 10 //10segundos
+
 //ajustes dinâmicos - função apara obter as dimensões da janela do navegador e, em seguida, 
 //atribui esses valores às variáveis largura e altura, respectivamente.
 function ajustaTamanhoPalcoJogo() {
@@ -17,7 +19,10 @@ function ajustaTamanhoPalcoJogo() {
 
 ajustaTamanhoPalcoJogo()
 
-
+var cronometro = setInterval(function () {
+    tempo -= 1
+    document.getElementById('cronometro').innerHTML = tempo //ele une a logica com o texto html
+}, 1000)//a cada 1 segundo vai decrementar 1
 
 
 
