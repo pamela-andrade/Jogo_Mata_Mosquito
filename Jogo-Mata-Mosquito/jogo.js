@@ -21,7 +21,18 @@ ajustaTamanhoPalcoJogo()
 
 var cronometro = setInterval(function () {
     tempo -= 1
-    document.getElementById('cronometro').innerHTML = tempo //ele une a logica com o texto html
+
+    if (tempo < 0) {
+        clearInterval(cronometro) //para não ficar dentro do alert 
+        //e continua criando os mosquitos porque la na pagina html tem a funçao de criar o mosquito
+        clearInterval(criaMosquito)
+        window.location.href = 'vitoria.html'
+
+    } else {
+        document.getElementById('cronometro').innerHTML = tempo //ele une a logica com o texto html
+    }
+
+
 }, 1000)//a cada 1 segundo vai decrementar 1
 
 
@@ -35,7 +46,7 @@ function posicaoRandomica() {
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove() //chama pelo id e remove
 
-        if (vidas > 3) {
+        if (vidas > 3) {//direciona para essa pagina
             window.location.href = 'fim_de_jogo.html'
         }
 
