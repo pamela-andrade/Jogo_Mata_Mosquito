@@ -8,6 +8,27 @@ var vidas = 1
 
 var tempo = 10 //10segundos
 
+var criaMosquitoTempo = 1500
+
+
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'normal') {
+    criaMosquitoTempo = 1500
+} else if (nivel === 'dificil') {
+    criaMosquitoTempo = 1000
+} else if (nivel === 'chucknorris') {
+    criaMosquitoTempo = 750
+}
+
+
+
+
+
+
+
 //ajustes dinâmicos - função apara obter as dimensões da janela do navegador e, em seguida, 
 //atribui esses valores às variáveis largura e altura, respectivamente.
 function ajustaTamanhoPalcoJogo() {
@@ -120,3 +141,5 @@ function ladoAleatorio() {
 
     }
 }
+
+

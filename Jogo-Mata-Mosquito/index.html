@@ -11,10 +11,19 @@
 
     <link rel="stylesheet" href="estilo.css" />
 
+
     <script>
 
+
         function iniciarJogo() {
-            alert(document.getElementById('nivel').value)
+            var nivel = document.getElementById('nivel').value
+
+            if (nivel === '') {
+                alert('Selecione um nivel para iniciar um jogo')
+                return false
+            }
+
+            window.location.href = "app.html?" + nivel //interrogação separa a pagina dos parametros não é bom usar esse metodo, tem melhores jeitos de fazer isso.
 
         }
 
@@ -37,7 +46,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="mb-2">
                         <select class="form-control" id="nivel">
-                            <option value="">--Selecione o Nivel</option>
+                            <option value="">--Selecione o Nivel--</option>
                             <option value="normal">Normal</option>
                             <option value="medio">Médio</option>
                             <option value="dificil">Dificil</option>
@@ -51,7 +60,7 @@
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo">Iniciar Jogo</button>
+                    <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
                 </div>
             </div>
         </div>
