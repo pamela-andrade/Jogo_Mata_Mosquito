@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    background-image: url(../Jogo-Mata-Mosquito/imagens/bg.jpg);
+    background-image: url(/imagens/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
