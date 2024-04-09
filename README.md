@@ -30,6 +30,11 @@ Este é um simples jogo "Mata Mosquito" desenvolvido em HTML, CSS e JavaScript, 
 - CSS3
 - JavaScript
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gAS_s2wKAOs?si=zyINuGm7yU8vOSPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+
 ## Autor
 
 Desenvolvido por Pamela Andrade
+
+
